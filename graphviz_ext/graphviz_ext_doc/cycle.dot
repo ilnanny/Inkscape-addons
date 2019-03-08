@@ -1,0 +1,32 @@
+ digraph ethane{
+     node[label="" shape="circle"]
+     in_node[shape=box,label="input"]
+     in_node->a
+     a[label=< x<sub>1</sub> >]
+     
+     a -> b [
+       headlabel= <<b>θ</b><sub>1</sub>	>
+       labeldistance=2.5
+	labelangle=-25];
+     b -> a [style="invis"];
+
+     b -> c [headlabel = <<b>θ</b><sub>2</sub>	>
+       labeldistance=2.5
+	labelangle=-25];
+     c -> b [style="invis"];
+
+     c -> d [headlabel= <...>
+       labeldistance=2.5
+       labelangle=-25];
+     d -> c [style="invis"]
+    
+    d -> e;
+    e  -> d [style="invis"] 
+     
+    e -> f;
+    f -> e[ style="invis"]
+
+     f -> a;
+    a -> f[style="invis"]
+ }
+        

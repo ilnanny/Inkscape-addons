@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Label feature with fill color</_name>
+  <id>org.inkscape.labelColour</id>
+  <dependency type="executable" location="extensions">labelColour.py</dependency>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+        <submenu _name="Color" />
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">labelColour.py</command>
+  </script>
+</inkscape-extension>

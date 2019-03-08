@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+	<_name>Replace color and alpha</_name>
+	<id>com.www.marker.es.ReplaceColorAlpha</id>
+	<dependency type="executable" location="extensions">coloreffect.py</dependency>
+	<dependency type="executable" location="extensions">color_replace.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+	<param name="from_color" type="string" max_length="8" _gui-text="Replace color (RRGGBB and optional AA): #">000000</param>
+	<param name="to_color" type="string" max_length="8" _gui-text="By color (RRGGBBAA): #">000000</param>
+	<effect needs-document="no">
+		<object-type>all</object-type>
+		<effects-menu>
+			<submenu _name="Color"/>
+		</effects-menu>
+	</effect>
+	<script>
+		<command reldir="extensions" interpreter="python">color_alpha_replace.py</command>
+	</script>
+</inkscape-extension>

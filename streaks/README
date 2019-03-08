@@ -1,0 +1,9 @@
+3  July 2018 - Initial release. Beta. No known bugs.
+
+To use this Inkscape extension the 2 files must be
+stored in ~/.config/inkscape/extensions (Linux/Mac)
+before starting Inkscape.  It will then appear in
+Extensions -> Examples
+
+Not tested in Windows.
+

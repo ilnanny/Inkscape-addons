@@ -1,0 +1,18 @@
+{
+  "docs": [
+    {"title":"",
+      "source": "https://raw.githubusercontent.com/codelv/inkcut/master/README.md"},
+    {"title":"Installing",
+      "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/installing.md"},
+    {"title":"Tutorial",
+      "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/tutorial.md"},
+    {"title":"Device Setup",
+      "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/device-setup.md"},
+    {"title":"Supported Devices",
+        "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/supported-devices.md"},
+    {"title":"Debugging",
+        "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/debugging.md"},
+    {"title":"Developer",
+      "source": "https://raw.githubusercontent.com/codelv/inkcut/master/docs/developer.md"}
+  ]
+}

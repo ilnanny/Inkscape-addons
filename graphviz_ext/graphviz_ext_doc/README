@@ -1,0 +1,18 @@
+GraphViz Extension for Inkscape
+Copyright (C) 2017 Thomas Flynn <tflynn@gradcenter.cuny.edu>
+Based on EqTexSvg by Julien Vitard <julienvitard@gmail.com>
+
+To use this plugin, you will need to install GraphViz http://www.graphviz.org/,
+which provides the dot command that turns graph specifications into image files.
+
+To install the plugin, place myext.inx and myext.py into the extensions folder
+of your inkscape installation.
+
+To access the plugin, goto Extensions -> Render -> Graphviz. Enter the absolute
+path of your dot file and press Apply to see the output of Graphviz on your
+canvas.
+
+A sample graph 'cycle.dot' is provided.
+
+The plugin was tested with Inkscape 0.48 on Linux.
+

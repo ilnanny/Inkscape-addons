@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Set object data from string</_name>
+    <id>com.www.marker.es.object_from_string</id>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <_param name="help-overwrite" type="description">Are you sure?</_param>
+    <param name="useId" type="string" _gui-text="ID to overwrite"></param>
+    <param name="useSelection" type="boolean" _gui-text="Use current selection instead ID">false</param>
+    <param name="outerSvg" type="string" _gui-text="Put the new content"></param>
+    
+    <effect needs-document="yes">  
+        <object-type>all</object-type>
+        <effects-menu>  
+            <submenu _name="Object"/>
+        </effects-menu>
+    </effect>  
+    <script>
+        <command reldir="extensions" interpreter="python">string_to_object.py</command>
+    </script>
+</inkscape-extension>

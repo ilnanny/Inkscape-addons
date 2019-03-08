@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Add Preview Layer</_name>
+  <id>org.ekips.filter.preview_layer</id>
+  <dependency type="executable" location="extensions">preview_layer.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+
+  <param name="bgcolor" type="optiongroup" _gui-text="Background color:">
+				<option value="#000000">black</option>
+				<option value="#FFFFFF">white</option></param>
+
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Preview"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">preview_layer.py</command>
+  </script>
+</inkscape-extension>

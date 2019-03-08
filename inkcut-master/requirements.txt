@@ -1,0 +1,17 @@
+enaml>=0.10.2
+twisted
+enamlx
+pyqtgraph
+qtconsole
+pyserial>=3.4
+jsonpickle
+lxml
+faulthandler; python_version < '3.0'
+PySide2; python_version < '3.0'
+PyQt5; python_version >= '3.0'
+qt-reactor
+pytest
+pytest-coverage
+# for pytest-qt:
+pytest-qt
+codecov

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Rounded Corners</_name>
+  <id>com.crowhoot.modify.roundedcorners</id>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">simplepath.py</dependency>
+  <param name="RCradius" type="float" min="0.001" max="10000.0" precision="3" _gui-text="Rounded Corner Radius:">1.000</param>
+	<param name="units" type="enum" _gui-text="Base unit:">
+		<_item value="72./96">pt</_item>
+		<_item value="1./16">pc</_item>
+		<_item value="1.">px</_item>
+		<_item value="25.4/96">mm</_item>
+		<_item value="2.54/96">cm</_item>
+		<_item value=".0254/96">m</_item>
+		<_item value="1./96">in</_item>
+		<_item value="1./1152">ft</_item>
+	</param>
+  <param name="LeftCorners" type="boolean" gui-text="Make Left Corners Round">true</param>
+  <param name="RightCorners" type="boolean" gui-text="Make Right Corners Round">true</param>
+  
+  <effect needs-live-preview="true">
+	<object-type>path</object-type>
+	<effects-menu>
+		<submenu _name="Modify Path"/>
+	</effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">RoundedCorners.py</command>
+  </script>
+</inkscape-extension>

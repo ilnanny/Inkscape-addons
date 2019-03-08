@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Get object data as string</_name>
+    <id>com.www.marker.es.object_as_string</id>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <effect needs-document="yes">  
+        <object-type>all</object-type>
+        <effects-menu>  
+            <submenu _name="Object"/>
+        </effects-menu>
+    </effect>  
+    <script>
+        <command reldir="extensions" interpreter="python">object_to_string.py</command>
+    </script>
+</inkscape-extension>

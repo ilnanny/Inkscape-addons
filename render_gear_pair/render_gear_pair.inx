@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Gear Pair</_name>
+    <id>gear.pairs</id>
+    <dependency type="executable" location="extensions">render_gear_pair.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>	
+    <param name="teethG1"    type="int"   min="6"    max="360"    _gui-text="Gear 1 Tooth Count:">24</param>
+    <param name="teethG2"    type="int"   min="6"    max="360"    _gui-text="Gear 2 Tooth Count:">24</param>
+    <param name="angle"    type="float" min="10.0" max="30.0"   _gui-text="Pressure angle (degrees):">20.0</param>
+    <param name="basis" _gui-text="Constant:" type="optiongroup" appearance="minimal">
+        <_option value="cp">Circular Pitch (CP)</_option>
+        <_option value="dx">Distance between centers (D)</_option>
+        <_option value="gr">Gear Ratio (GR)</_option>
+    </param>
+    <_param name="basis_text" type="description">CP: Constant CP and teeth numbers, variable D.</_param>
+    <_param name="basis_text2" type="description">D: Constant D and teeth numbers, variable CP.</_param>
+    <_param name="basis_text3" type="description">GR: Constant D, CP and GR, variable tooth count.</_param>
+    <param name="pitch"    type="float" min="0.1"  max="1000.0" _gui-text="Circular pitch (tooth size) CP:">3.0</param>
+    <param name="distance"    type="int"   min="6"    max="360"    _gui-text="Center to Center Distance D:">24</param>
+    <param name="centerdiameterG1"    type="float" min="0.0" max="1000.0"   _gui-text="Gear 1 diameter of center hole (0 for none):">20.0</param>
+    <param name="centerdiameterG2"    type="float" min="0.0" max="1000.0"   _gui-text="Gear 2 diameter of center hole (0 for none):">20.0</param>
+    <param name="unit" _gui-text="Units: for all measurements" type="optiongroup" appearance="minimal">
+        <_option value="mm">mm</_option>
+        <_option value="px">px</_option>
+        <_option value="in">in</_option>
+    </param>
+    <effect>
+	<object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Render">
+                <submenu _name="Gear"/>
+            </submenu>
+        </effects-menu>						    		
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">render_gear_pair.py</command>
+    </script>
+</inkscape-extension>

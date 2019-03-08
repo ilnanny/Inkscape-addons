@@ -1,0 +1,229 @@
+"""
+Created on Jul 25, 2015
+
+@author: jrm
+"""
+from enaml.core.api import Include
+from enaml.workbench.plugin_manifest import PluginManifest
+from enaml.workbench.api import Extension
+from inkcut.device.extensions import DeviceDriver
+
+
+def load_drivers():
+    """ At some point in time load these from a server """
+
+    return []
+
+
+enamldef DriversManifest(PluginManifest):
+    """ Device drivers manifest.
+
+    A "DeviceDriver" is simply a declaration of the device name, dimensions,
+    and supported protocols and connection types.
+
+    To fully customize how the "Driver" works, define a factory that creates
+    a Device subclass implementing the desired behavior.A config_view can
+    also be set to provide a customized settings UI for the device.
+
+    """
+    id = 'inkcut.device.drivers'
+
+    Extension:
+        id = 'protocols'
+        point = 'inkcut.device.driver'
+
+        DeviceDriver:
+            manufacturer = 'Inkcut'
+            model = 'Generic Driver'
+
+        DeviceDriver:
+            manufacturer = 'Vinylmark'
+            model = 'Raspberry PI CNC'
+            width = '60cm'
+            length = '60cm'
+
+        DeviceDriver:
+            manufacturer = 'Roland'
+            model = 'PNC-900'
+            width = '12in'
+            protocols = ['camm-gl1']
+            
+        DeviceDriver:
+            manufacturer = 'Roland'
+            model = 'PNC-1000'
+            width = '46.8cm'
+            protocols = ['camm-gl1']
+
+        DeviceDriver:
+            manufacturer = 'ANAgraph'
+            model = 'AE-70e'
+            width = '76cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial', 'printer']
+        
+        DeviceDriver:
+            manufacturer = 'KNK'
+            model = 'ACS Eagle/KNK Maxx'
+            width = '28in'
+
+        DeviceDriver:
+            manufacturer = 'US Cutter'
+            model = 'Refine MH-1351'
+            width = '120cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial', 'printer']
+
+        DeviceDriver:
+            manufacturer = 'US Cutter'
+            model = 'Refine MH-721'
+            width = '60cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial', 'printer']
+
+        DeviceDriver:
+            manufacturer = 'US Cutter'
+            model = 'Laser Point'
+            width = '61cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial', 'printer']
+
+        DeviceDriver:
+            manufacturer = 'Graphtec'
+            model = 'CE5000-60'
+            width = '60cm'
+            protocols = ['hpgl', 'gpgl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Graphtec'
+            model = '8000-130'
+            width = '130cm'
+            length = '700cm'
+            protocols = ['hpgl', 'gpgl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Silhouette'
+            model = 'Portrait'
+            width = '300cm'
+            length = '20cm'
+            protocols = ['gpgl']
+            connections = ['printer']
+            default_config = {
+              'scale': [ 5.64, 5.64 ]
+            }
+
+        DeviceDriver:
+            manufacturer = 'Ioline'
+            model = 'Classic'
+            width = '60cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Creation'
+            model = 'PCut CT-630'
+            width = '61cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Mimaki'
+            model = 'CG-60ST'
+            width = '60cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Gcc'
+            model = 'Bob cat 60'
+            width = '60cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Summa'
+            model = 'D120R'
+            width = '120cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Summa'
+            model = 'T600'
+            width = '575cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Roland'
+            model = 'CM 24'
+            width = '61cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Roland'
+            model = 'CX-24'
+            width = '60cm'
+            length = '50cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial','printer']
+        
+        DeviceDriver:
+            manufacturer = 'Secabo'
+            model = 'C60ii'
+            width = '60cm'
+            protocols = ['hpgl']
+            
+        DeviceDriver:
+            manufacturer = 'SeikiTech'
+            model = 'SK-870T'
+            width = '86cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Redsail'
+            model = 'RS1360C'
+            width = '120cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+
+        DeviceDriver:
+            manufacturer = 'Rheinstern'
+            model = ' LB-720A'
+            width = '720cm'
+            protocols = ['hpgl', 'dmpl']
+            connections = ['serial']
+            
+        DeviceDriver:
+            manufacturer = 'Vision'
+            model = ' VE-810 (XD) Engraver'
+            width = '10in'
+            length = '8in'
+            protocols = ['hpgl']
+            connections = ['serial']
+        
+#        DeviceDriver:
+#            manufacturer = 'Vision'
+#            model = ' VE-810 (XD) Engraver (configured)'
+#            width = '10in'
+#            length = '8in'
+#            protocols = ['hpgl']
+#            connections = ['serial']
+#            default_config = dict(
+#                scale=[-1, 1],
+#                connection=dict(
+#                    serial=dict(
+#                        baudrate=123456,
+#                        port='/dev/ttyUSB0',
+#                        rtscts=True,
+#                    )
+#                )
+#            )
+
+
+        #: Load any drivers from external sources
+        Include:
+            objects = load_drivers()

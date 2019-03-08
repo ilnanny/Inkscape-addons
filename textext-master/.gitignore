@@ -1,0 +1,17 @@
+*.pyc
+*.orig
+*.rej
+*.tar.gz
+tests/out.svg
+*.iss
+.directory
+bezmisc.py
+cubicsuperpath.py
+inkex.py
+simplepath.py
+simplestyle.py
+simpletransform.py
+/textext-*-linux/
+/TexText-Linux-*.tgz
+/TexText-Linux-*.zip
+/TexText-Windows-*.exe

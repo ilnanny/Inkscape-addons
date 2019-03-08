@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Guilloche Pattern</_name>
+    <id>org.inkscape.effect.guilloche_pattern</id>
+    <dependency type="executable" location="extensions">pathmodifier.py</dependency>
+    <dependency type="executable" location="extensions">guilloche_pattern.py</dependency>
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <param name="patternFunction" type="optiongroup" appearance="minimal" _gui-text="Function">
+        <option value="line">Line</_option>
+        <option value="sin">Sin</_option>
+        <option value="cos">Cos</_option>
+        <option value="env1">Env1</_option>
+        <option value="env2">Env2</_option>
+        <option value="env3">Env3</_option>
+        <option value="env4">Env4</_option>
+        <option value="env5">Env5</_option>
+        <option value="env6">Env6</_option>
+        <option value="env7">Env7</_option>
+        <option value="env8">Env8</_option>
+        <option value="env9">Env9</_option>
+        <option value="env10">Env10</_option>
+        <option value="env11">Env11</_option>
+        <option value="env12">Env12</_option>
+    </param>
+    <param name="tab" type="notebook">
+        <page name="pattern" gui-text="Pattern ">
+            <param name="frequency" type="int" min="1" max="100" _gui-text="Frequency:">10</param>
+            <param name="amplitude" type="int" min="-300" max="300" _gui-text="Amplitude:">100</param>
+            <param name="phaseOffset" type="int" min="-100" max="100" _gui-text="Phase offset:">0</param>
+            <param name="offset" type="int" min="-100" max="100" _gui-text="Offset:">0</param>
+            <param name="phaseCoverage" type="int" min="-100" max="100" _gui-text="Phase Coverage">100</param>
+            <param name="series" type="int" min="1" max="50" _gui-text="Series">1</param>
+            <param name="nodes" type="int" min="2" max="1000" _gui-text="Number of nodes:">20</param>
+            <param name="remove" type="boolean" _gui-text="Remove control objects">false</param>
+            <param name="strokeColor" type="color"></param>
+        </page>
+        <page name="function" gui-text="Function ">
+            <param name="amplitude1" type="float" min="-10.0" max="10.0" precision="2" _gui-text="Amplitude 1:">0.0</param>
+            <param name="phase1" type="int" min="-100" max="100" _gui-text="Phase offset 1:">0</param>
+            <param name="amplitude2" type="float" min="-10.0" max="10.0" precision="2" _gui-text="Amplitude 2:">0.0</param>
+            <param name="phase2" type="int" min="-100" max="100" _gui-text="Phase offset 2:">0</param>
+            <param name="amplitude3" type="float" min="-10.0" max="10.0" precision="2" _gui-text="Amplitude 3:">0.0</param>
+            <param name="phase3" type="int" min="-100" max="100" _gui-text="Phase offset 3:">0</param>
+            <param name="amplitude4" type="float" min="-10.0" max="10.0" precision="2" _gui-text="Amplitude 4:">0.0</param>
+            <param name="phase4" type="int" min="-100" max="100" _gui-text="Phase offset 4:">0</param>
+            <param name="amplitude5" type="float" min="-10.0" max="10.0" precision="2" _gui-text="Amplitude 5:">0.0</param>
+            <param name="phase5" type="int" min="-100" max="100" _gui-text="Phase offset 5:">0</param>
+        </page>
+    </param>
+    <effect>
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu _name="Examples"/>
+        </effects-menu>            
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">guilloche_pattern.py</command>
+    </script>
+</inkscape-extension>

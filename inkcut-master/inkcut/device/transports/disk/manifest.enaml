@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Jul 25, 2015
+
+@author: jrm
+"""
+import enaml
+from enaml.workbench.api import Extension
+from enaml.workbench.plugin_manifest import PluginManifest
+from inkcut.device.extensions import DeviceTransport, DEVICE_TRANSPORT_POINT
+
+def transport_factory(driver, declaration, protocol):
+    from .plugin import FileTransport, FileConfig
+    config = FileConfig(**driver.get_connection_config('disk'))
+    return FileTransport(declaration=declaration, protocol=protocol, config=config)
+
+
+def config_view_factory():
+    with enaml.imports():
+        from .settings import FileSettingsView
+    return FileSettingsView
+
+
+enamldef FileManifest(PluginManifest):
+    """ Add new protocols here or within any other plugin.
+
+    """
+    id = 'inkcut.device.transport.disk'
+    Extension:
+        id = 'transports'
+        point = DEVICE_TRANSPORT_POINT
+
+        DeviceTransport:
+            id = 'disk'
+            name = 'Save to file'
+            factory = transport_factory
+            config_view = config_view_factory

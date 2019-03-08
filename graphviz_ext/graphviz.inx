@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Graphviz</_name>
+    <id>org.inkscape.effect.graphviz</id>
+	<dependency type="executable" location="extensions">graphviz.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+	<dependency type="executable" location="path">dot</dependency>
+	<param name="dotfile" type="string" _gui-text="DOT file: ">test.dot</param>
+	
+    <effect>
+		<object-type>all</object-type>
+                <effects-menu>
+                      <submenu _name="Render"/>
+	        </effects-menu>
+    </effect>
+    <script>
+        <command reldir="extensions" interpreter="python">graphviz.py</command>
+    </script>
+</inkscape-extension>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Shape recognition</_name>
+  <id>qpad</id>
+  <dependency type="executable" location="extensions">shapereco.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="MainTabs" type="notebook">
+
+    <!-- Basics ********** -->
+    <page name="Basic" gui-text="Basic options">
+        <_param name="title" type="description">Simple shape
+        recognition. From a selection of one or many path, find straight
+        lines, recognizes those parallel or with similar angles or
+        lenght. Recognizes rectangles, circle and ellipses. </_param>
+        <param name="keepOrigin" type="boolean" _gui-text="Keep origin path">false</param>
+        <param name="doUniformization" type="boolean" _gui-text="Enable uniformization">true</param>
+    </page>
+
+    <!-- Segments ********** -->
+    <page name="page_segments" gui-text="Segments finding">
+
+      <param name="name" type="description" appearance="header">Segment extension</param>
+      <param name="segExtensionEnable" type="boolean" _gui-text="Enable">true</param>
+      <param name="segExtensionDtoSeg" type="float" _gui-description="Distance (relative to segment length) from point to segment below wich point is merged to segment"
+             _gui-text="Relative distance to segment"
+             precision="3" min="0" max="20"> 0.03
+      </param>
+
+      <param name="segExtensionQual" type="float" _gui-description="Fit quality for which a candidate point is actually merged"
+             _gui-text="Fit quality"
+             precision="2" max="1.">
+      0.5</param>
+
+      <param name="mergeDesc" type="description" appearance="header">Merge aligned consectutive segments </param>
+      <param name="segAngleMergeEnable" type="boolean" _gui-text="Enable">true</param>
+
+      <param name="removDesc" type="description" appearance="header">Remove very small segments/sub-paths </param>
+      <param name="segRemoveSmallEdge" type="boolean" _gui-text="Enable">true</param>
+      
+
+    </page>
+
+    <!-- Uniformization ********** -->
+    <page name="page_unif" gui-text="Uniformization">
+      <param name="doParrallelize" type="boolean"
+             _gui-text="Parralelize segments">true</param>
+      <param name="doKnownAngle" type="boolean" _gui-text="Set segment angles to closest remarkable angles">true</param>
+      <param name="doEqualizeDist" type="boolean" _gui-text="Equalize segments of similar length">true</param>
+      <param name="doEqualizeRadius" type="boolean" _gui-text="Equalize circle radius of similar length">true</param>
+      <param name="doCenterCircOnSeg" type="boolean" _gui-text="Center circle center on nearby segment">true</param>
+    </page>
+
+  </param>
+
+
+  
+  <effect>
+    <object-type>path</object-type>
+    <effects-menu>
+      <submenu _name="Generate from Path"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">shapereco.py</command>
+  </script>
+</inkscape-extension>

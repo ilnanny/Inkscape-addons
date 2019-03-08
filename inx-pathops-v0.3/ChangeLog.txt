@@ -1,0 +1,46 @@
+faf745a Bump version string
+cf63b1f Selection sets are unstable ... check and exit early
+20b38dc Minor tweak to collect_ids()
+37eedab z_sort(), z_iter(): do not modify original list
+2ae32d2 Update README
+c816a66 Update README
+8d0de94 Update docstring
+6555d40 Fix docstrings, comments
+a500d68 Add option to delete top object when done
+8966abd Raise INX param max limit for chunk size
+e6c96f8 Bump version string
+b181403 Fix performance issue with Effect.getselected()
+2b9e75b Remove debug code
+8813a65 Add timed tests for z_sort() and z_iter()
+d26847b Simplify z_sort(): node.iter() includes node
+26fca94 Rename variables yet again in z_sort() (nfc)
+17d6d58 Delete duplicate comment
+de6dd6a Reduce variables used in z-sorting function
+7535b92 Cleanup unused import
+057ec22 Cleanup unused z-sorting functions
+7dea635 Test alternative z-sorting functions (timed)
+718083a Allow top_path to be part of a selected group
+a51b38e Update README
+58a495f Initial release
+77aae0d Update Makefile
+7c99aa4 Change <object-type> effect attribute to 'all'
+25852da Add README
+66e5e24 Better id for combined effect with dialog
+f1f9810 Fix option label for 'Path > Combine'
+46c7255 Add two missing path ops (Union, Combine)
+2fd3007 Fix default for ink_verb option
+9fea5c4 Provide total paths and chunksize for dry_run
+3dd34cd Simplify (recursive) selection
+3e0d408 Fix Makefile
+1a902a9 Prepare for creating tag-based releases
+0aa895c Remove hidden params from INX if default
+6291614 Add option to recursively process groups to GUI
+abe768b Rename INX file for consistency
+69e1bea Fix typo in INX attribute name
+d02e745 Add recursive processing of selection (nested groups)
+59b166f Use inkex replacement if available
+211844c Add INX files for individual ops (hidden params)
+c9bf832 Fix check of selected objects
+81e6c25 Rename tempfile suffix
+7f6c206 Don't exclude text elements; improve checks.
+dc07dd5 Initial commit
