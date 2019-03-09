@@ -12,6 +12,20 @@ If you redistribuite it please give CREDIT by linking back to the creators !
 
 
 <hr align=”left” size=”1″ width=”300″ color=”red” noshade>
+Generally the extension folder can be found here:
 
+-> Linux:
+
+~/.config/inkscape/extensions/
+/usr/share/inkscape/extensions/
+<hr align=”left” size=”1″ width=”80″ color=”red” noshade>
+-> Windows:
+
+type the following into the address line on a File Browser window:
+%appdata%/inkscape/extensions
+<hr align=”left” size=”1″ width=”80″ color=”red” noshade>
+-> Mac OS X:
+
+/Applications/Inkscape.app/Contents/Resources/share/inkscape/extensions/
 
 <hr align=”left” size=”1″ width=”300″ color=”red” noshade>
